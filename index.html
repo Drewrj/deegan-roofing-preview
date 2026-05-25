@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deegan Roofing | 1,791 Five-Star Reviews. Zero Shortcuts. | Scotch Plains, NJ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;color:#1e293b;background:#f8fafc;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;line-height:1.6;font-size:16px}
+::selection{background:#f59e0b;color:#fff}
+
+:root{
+  --brand:#1e3a5f;
+  --brand-dark:#0f1f33;
+  --brand-dark-rgb:15,31,51;
+  --brand-mid:#2a5080;
+  --accent:#f59e0b;
+  --accent-hover:#d97706;
+  --accent-text:#fff;
+  --accent-rgb:245,158,11;
+  --slate-50:#f8fafc;
+  --slate-100:#f1f5f9;
+  --slate-200:#e2e8f0;
+  --slate-300:#cbd5e1;
+  --slate-400:#94a3b8;
+  --slate-500:#64748b;
+  --slate-600:#475569;
+  --slate-700:#334155;
+  --slate-800:#1e293b;
+  --slate-900:#0f172a;
+}
+
+.container{max-width:1280px;margin:0 auto;padding:0 24px}
+
+/* Navigation */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:16px 24px;transition:all 0.35s ease}
+.nav-inner{max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+.nav-logo{display:flex;align-items:center;gap:8px;text-decoration:none;background:rgba(255,255,255,0.92);padding:5px 10px;border-radius:8px;transition:background 0.35s ease}
+.nav-logo img{height:44px;width:auto;display:block;transition:filter 0.35s ease;filter:drop-shadow(0 2px 6px rgba(0,0,0,0.15))}
+.nav-logo-text{display:none;font-size:22px;letter-spacing:-0.025em;font-weight:700;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,0.3)}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{color:rgba(255,255,255,0.9);text-decoration:none;font-size:14px;font-weight:500;transition:color 0.2s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{background:var(--accent);color:var(--accent-text) !important;padding:10px 24px;border-radius:100px;font-size:14px;font-weight:600;transition:background 0.2s}
+.nav-cta:hover{background:var(--accent-hover)}
+
+.nav-scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 1px 3px rgba(0,0,0,0.06);padding:10px 24px}
+.nav-scrolled .nav-logo{background:transparent;padding:5px 0}
+.nav-scrolled .nav-logo img{filter:none}
+.nav-scrolled .nav-logo-text{color:var(--brand)}
+.nav-scrolled .nav-links a{color:var(--slate-600)}
+.nav-scrolled .nav-links a:hover{color:var(--accent)}
+.nav-scrolled .nav-cta{background:var(--brand);color:#fff !important}
+.nav-scrolled .nav-cta:hover{background:var(--brand-dark)}
+
+/* Hero */
+.hero{position:relative;min-height:92vh;display:flex;align-items:center;justify-content:center;clip-path:polygon(0 0,100% 0,100% 88%,50% 100%,0 88%)}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;background-color:var(--brand-dark)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(var(--brand-dark-rgb),0.85),rgba(var(--brand-dark-rgb),0.55) 45%,rgba(var(--brand-dark-rgb),0.92))}
+.hero-content{position:relative;z-index:2;text-align:center;max-width:900px;padding:0 16px 80px;margin-top:80px}
+.hero-label{font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;display:block}
+.hero h1{font-size:clamp(32px,5vw,60px);letter-spacing:-0.025em;font-weight:600;color:#fff;line-height:1.1;margin-bottom:24px}
+.hero-intro{font-size:16px;color:var(--slate-300);max-width:640px;margin:0 auto 40px;line-height:1.625;font-weight:500}
+.hero-stats{display:flex;gap:48px;justify-content:center;margin-bottom:40px;flex-wrap:wrap}
+.hero-stat .number{font-size:36px;letter-spacing:-0.025em;font-weight:600;color:#fff}
+.hero-stat .label{font-size:14px;font-weight:500;color:var(--slate-400);margin-top:4px}
+.hero-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+/* Buttons */
+.btn{padding:14px 32px;border-radius:100px;font-size:16px;font-weight:600;text-decoration:none;display:inline-block;transition:all 0.2s;border:none;cursor:pointer}
+.btn-accent{background:var(--accent);color:var(--accent-text)}
+.btn-accent:hover{background:var(--accent-hover)}
+.btn-outline-white{background:transparent;border:1px solid #fff;color:#fff}
+.btn-outline-white:hover{background:rgba(255,255,255,0.1)}
+.btn-brand{background:var(--brand);color:#fff}
+.btn-brand:hover{background:var(--brand-dark)}
+.btn-ghost-accent{background:rgba(245,158,11,0.18);color:var(--accent);font-size:14px;padding:10px 24px}
+.btn-ghost-accent:hover{background:rgba(245,158,11,0.28)}
+
+/* Section Headers */
+.section{padding:96px 0}
+.section-alt{background:var(--slate-50)}
+.section-header{text-align:center;margin-bottom:64px}
+.section-label{font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;display:block}
+.section-title{font-size:clamp(28px,3.5vw,40px);letter-spacing:-0.025em;font-weight:600;color:var(--slate-900)}
+.section-subtitle{font-size:16px;color:var(--slate-600);max-width:640px;margin:12px auto 0;line-height:1.625;font-weight:400}
+
+/* Service Cards */
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.card{background:#fff;border-radius:1.5rem;padding:0;border:1px solid var(--slate-100);transition:all 0.3s;text-align:center;overflow:hidden}
+.card:hover{box-shadow:0 25px 50px -12px rgba(0,0,0,0.08),0 25px 50px -12px rgba(203,213,225,0.5);transform:translateY(-2px)}
+.card-photo{position:relative;width:100%;aspect-ratio:16/10;overflow:hidden;background:var(--slate-100)}
+.card-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s cubic-bezier(0.16,1,0.3,1)}
+.card:hover .card-photo img{transform:scale(1.04)}
+.card-icon{width:64px;height:64px;background:#fff;border:4px solid #fff;border-radius:1rem;display:flex;align-items:center;justify-content:center;margin:-32px auto 16px;color:var(--brand);position:relative;z-index:1;box-shadow:0 4px 12px rgba(0,0,0,0.08)}
+.card-icon i{width:32px;height:32px}
+.card-body{padding:0 32px 32px}
+.card h3{font-size:20px;letter-spacing:-0.025em;font-weight:600;color:var(--slate-900);margin-bottom:12px}
+.card p{font-size:16px;color:var(--slate-600);line-height:1.625}
+
+.card-dark{background:var(--brand-dark);border-color:rgba(255,255,255,0.05);box-shadow:0 25px 50px -12px rgba(0,0,0,0.25)}
+.card-dark:hover{box-shadow:0 25px 50px -12px rgba(0,0,0,0.35)}
+.card-dark .card-icon{background:var(--brand-dark);border-color:var(--brand-dark);color:var(--accent)}
+.card-dark h3{color:#fff}
+.card-dark p{color:var(--slate-300)}
+.card-dark .card-photo{background:rgba(255,255,255,0.05)}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about-label{font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;display:block}
+.about-title{font-size:clamp(28px,3.5vw,40px);letter-spacing:-0.025em;font-weight:600;color:var(--slate-900);margin-bottom:24px}
+.about-text{font-size:16px;color:var(--slate-600);line-height:1.625;margin-bottom:24px}
+.about-stats{display:flex;gap:48px;border-top:1px solid var(--slate-200);padding-top:32px;margin-top:32px;flex-wrap:wrap}
+.about-stats h4{font-size:24px;letter-spacing:-0.025em;font-weight:600;color:var(--slate-900);margin-bottom:4px}
+.about-stats p{font-size:14px;font-weight:500;color:var(--slate-500)}
+.about-features{display:flex;flex-direction:column;gap:32px}
+.about-feature{display:flex;gap:24px;align-items:flex-start}
+.about-feature-photo{width:96px;height:96px;min-width:96px;border-radius:1.25rem;overflow:hidden;background:var(--slate-100)}
+.about-feature-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.about-feature h3{font-size:20px;letter-spacing:-0.025em;font-weight:600;color:var(--slate-900);margin-bottom:8px}
+.about-feature p{font-size:16px;color:var(--slate-600);line-height:1.625}
+
+/* Gallery */
+.gallery-section{padding:96px 0;background:var(--slate-50)}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gallery-tile{position:relative;aspect-ratio:4/3;overflow:hidden;border-radius:1.25rem;background:var(--slate-100);cursor:pointer}
+.gallery-tile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s cubic-bezier(0.16,1,0.3,1)}
+.gallery-tile:hover img{transform:scale(1.05)}
+.gallery-caption{position:absolute;left:0;right:0;bottom:0;padding:16px 20px;color:#fff;font-size:14px;font-weight:500;background:linear-gradient(to top,rgba(0,0,0,0.7),rgba(0,0,0,0));opacity:0;transition:opacity 0.3s}
+.gallery-tile:hover .gallery-caption{opacity:1}
+
+/* Service Areas */
+.area-pills{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:32px}
+.area-pill{padding:10px 24px;background:#fff;border:1px solid var(--slate-100);border-radius:100px;font-size:14px;font-weight:500;color:var(--slate-700);transition:all 0.2s}
+.area-pill:hover{border-color:var(--brand);background:var(--slate-50)}
+
+/* Dark Island */
+.dark-island{background:var(--brand-dark);border-radius:3rem;margin:0 24px;padding:96px 24px;position:relative;overflow:hidden}
+.dark-island::before{content:'';position:absolute;inset:0;opacity:0.06;background-image:radial-gradient(circle at 2px 2px,#fff 1px,transparent 0);background-size:40px 40px}
+.dark-island .container{position:relative;z-index:1}
+.dark-island .section-label{color:var(--accent)}
+.dark-island .section-title{color:#fff}
+.dark-island .section-subtitle{color:var(--slate-400)}
+
+.dark-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:1.5rem;padding:32px;transition:all 0.3s}
+.dark-card:hover{background:rgba(255,255,255,0.07);border-color:rgba(255,255,255,0.1);box-shadow:0 20px 40px rgba(0,0,0,0.2)}
+.dark-card .star-row{display:flex;gap:4px;margin-bottom:16px}
+.dark-card .star-row svg{width:16px;height:16px;color:#fbbf24}
+.dark-card .review-text{font-size:16px;color:rgba(255,255,255,0.7);line-height:1.625;font-style:italic;margin-bottom:24px}
+.dark-card .review-author{font-size:18px;letter-spacing:-0.025em;font-weight:600;color:#fff}
+.dark-card .review-source{font-size:13px;color:var(--slate-400);margin-top:4px}
+
+/* Contact */
+.contact-section{padding:96px 24px;background:var(--slate-50)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;max-width:1280px;margin:0 auto}
+.contact-form-card{background:#fff;border:1px solid var(--slate-200);border-radius:1.5rem;padding:48px;box-shadow:0 4px 16px rgba(0,0,0,0.04)}
+.contact-form-card h3{font-size:24px;font-weight:600;color:var(--slate-900);margin-bottom:8px;letter-spacing:-0.025em}
+.contact-form-card .form-sub{font-size:14px;color:var(--slate-600);margin-bottom:32px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-field{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+.form-field label{font-size:13px;font-weight:500;color:var(--slate-700)}
+.form-field input,.form-field select,.form-field textarea{padding:12px 16px;border:1px solid var(--slate-200);border-radius:0.75rem;font-size:15px;font-family:inherit;color:var(--slate-900);background:#fff;transition:border-color 0.2s,box-shadow 0.2s}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px rgba(var(--brand-dark-rgb),0.08)}
+.form-field textarea{resize:vertical;min-height:120px}
+.form-submit{width:100%;padding:14px 24px;background:var(--brand);color:#fff;border:none;border-radius:100px;font-size:15px;font-weight:600;cursor:pointer;transition:background 0.2s;margin-top:8px;font-family:inherit}
+.form-submit:hover{background:var(--brand-dark)}
+
+.contact-info-card{background:var(--brand-dark);color:#fff;border-radius:1.5rem;padding:48px;position:relative;overflow:hidden}
+.contact-info-card::before{content:'';position:absolute;inset:0;opacity:0.04;background-image:radial-gradient(circle at 2px 2px,#fff 1px,transparent 0);background-size:40px 40px}
+.contact-info-card>*{position:relative;z-index:1}
+.contact-info-card h3{font-size:24px;font-weight:600;color:#fff;margin-bottom:8px;letter-spacing:-0.025em}
+.contact-info-card .info-sub{font-size:14px;color:var(--slate-400);margin-bottom:32px;line-height:1.625}
+.info-row{display:flex;gap:16px;align-items:flex-start;margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,0.08)}
+.info-row:last-of-type{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.info-icon{width:44px;height:44px;min-width:44px;border-radius:0.75rem;background:rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:center;color:var(--accent)}
+.info-icon svg{width:20px;height:20px}
+.info-content{flex:1;min-width:0}
+.info-content .info-label{font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--slate-400);margin-bottom:4px;font-weight:600}
+.info-content .info-value{font-size:16px;font-weight:500;color:#fff;line-height:1.4;word-break:break-word}
+.info-content a{color:#fff;text-decoration:none}
+.info-content a:hover{color:var(--accent)}
+.info-cta{display:block;width:100%;padding:14px 24px;background:var(--accent);color:var(--accent-text);text-decoration:none;border-radius:100px;font-size:15px;font-weight:600;text-align:center;margin-top:32px;transition:background 0.2s}
+.info-cta:hover{background:var(--accent-hover)}
+
+/* Footer */
+.footer{background:var(--brand-dark);color:var(--slate-300);padding:80px 0 48px;border-radius:3rem 3rem 0 0;margin-top:40px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;border-bottom:1px solid rgba(255,255,255,0.1);padding-bottom:48px;margin-bottom:32px}
+.footer-brand{display:flex;align-items:center;gap:8px;margin-bottom:24px}
+.footer-brand img{height:56px;width:auto;filter:drop-shadow(0 2px 6px rgba(0,0,0,0.25))}
+.footer-brand-text{display:none;font-size:24px;letter-spacing:-0.025em;font-weight:700;color:#fff}
+.footer-desc{font-size:14px;color:var(--slate-400);line-height:1.625;max-width:300px;margin-bottom:32px}
+.footer-social{display:flex;gap:12px}
+.footer-social a{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.05);display:flex;align-items:center;justify-content:center;color:var(--slate-400);transition:all 0.2s}
+.footer-social a:hover{background:var(--accent);color:var(--brand-dark)}
+.footer-social a i{width:16px;height:16px}
+.footer h4{font-size:18px;letter-spacing:-0.025em;font-weight:600;color:#fff;margin-bottom:24px}
+.footer ul{list-style:none;display:flex;flex-direction:column;gap:16px}
+.footer ul a{color:var(--slate-400);text-decoration:none;font-size:14px;font-weight:500;transition:color 0.2s}
+.footer ul a:hover{color:var(--accent)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:500;color:var(--slate-500)}
+
+/* Mobile sticky CTA */
+.mobile-sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:999;padding:12px 16px;background:var(--brand-dark);border-top:1px solid rgba(255,255,255,0.1)}
+.mobile-sticky-cta a{display:block;width:100%;padding:14px;background:var(--accent);color:var(--accent-text);text-decoration:none;border-radius:100px;font-size:16px;font-weight:600;text-align:center}
+
+/* Scroll Animations */
+[data-reveal]{opacity:0;transition:opacity 0.8s cubic-bezier(0.16,1,0.3,1),transform 0.8s cubic-bezier(0.16,1,0.3,1)}
+[data-reveal="up"]{transform:translateY(32px)}
+[data-reveal="fade"]{transform:none}
+[data-reveal="scale"]{transform:scale(0.94)}
+[data-reveal].visible{opacity:1;transform:none}
+.hero-content [data-reveal]{transition-delay:calc(var(--i,0) * 0.1s)}
+
+.card,.dark-card,.area-pill,.gallery-tile{opacity:0;transform:translateY(20px);transition:opacity 0.6s cubic-bezier(0.16,1,0.3,1),transform 0.6s cubic-bezier(0.16,1,0.3,1),box-shadow 0.3s,border-color 0.3s,background 0.3s}
+.card-grid.visible .card,.testimonials-grid.visible .dark-card,.gallery-grid.visible .gallery-tile{opacity:1;transform:none}
+.card-grid.visible .card:nth-child(1),.testimonials-grid.visible .dark-card:nth-child(1),.gallery-grid.visible .gallery-tile:nth-child(1){transition-delay:0.05s}
+.card-grid.visible .card:nth-child(2),.testimonials-grid.visible .dark-card:nth-child(2),.gallery-grid.visible .gallery-tile:nth-child(2){transition-delay:0.12s}
+.card-grid.visible .card:nth-child(3),.testimonials-grid.visible .dark-card:nth-child(3),.gallery-grid.visible .gallery-tile:nth-child(3){transition-delay:0.19s}
+.card-grid.visible .card:nth-child(4),.gallery-grid.visible .gallery-tile:nth-child(4){transition-delay:0.26s}
+.card-grid.visible .card:nth-child(5),.gallery-grid.visible .gallery-tile:nth-child(5){transition-delay:0.33s}
+.card-grid.visible .card:nth-child(6),.gallery-grid.visible .gallery-tile:nth-child(6){transition-delay:0.40s}
+
+.area-pills.visible .area-pill{opacity:1;transform:none}
+.area-pills.visible .area-pill:nth-child(1){transition-delay:0.02s}
+.area-pills.visible .area-pill:nth-child(2){transition-delay:0.04s}
+.area-pills.visible .area-pill:nth-child(3){transition-delay:0.06s}
+.area-pills.visible .area-pill:nth-child(4){transition-delay:0.08s}
+.area-pills.visible .area-pill:nth-child(5){transition-delay:0.10s}
+.area-pills.visible .area-pill:nth-child(6){transition-delay:0.12s}
+.area-pills.visible .area-pill:nth-child(7){transition-delay:0.14s}
+
+/* CTA island visibility fallback */
+.cta-island [data-reveal]{opacity:1;transform:none}
+
+@media(max-width:1024px){
+  .card-grid{grid-template-columns:repeat(2,1fr)}
+  .about-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-grid{grid-template-columns:1fr;gap:24px}
+}
+@media(max-width:768px){
+  .hero{min-height:100vh;clip-path:polygon(0 0,100% 0,100% 93%,50% 100%,0 93%)}
+  .hero h1{font-size:32px}
+  .hero-content{margin-top:100px}
+  .card-grid{grid-template-columns:1fr}
+  .testimonials-grid{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr;gap:40px}
+  .nav-links{display:none}
+  .mobile-sticky-cta{display:block}
+  .dark-island{border-radius:1.5rem;margin:0 12px;padding:64px 16px}
+  .footer{border-radius:1.5rem 1.5rem 0 0;padding-bottom:100px}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;gap:12px;text-align:center}
+  .about-stats{gap:32px}
+  .gallery-grid{grid-template-columns:1fr}
+  .contact-section{padding:64px 16px}
+  .contact-form-card,.contact-info-card{padding:32px}
+  .form-row{grid-template-columns:1fr;gap:0}
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav" id="main-nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <img src="https://www.deeganroofing.com/wp-content/uploads/2022/01/nj-local-roofer.png" alt="Deegan Roofing logo">
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#areas">Service Areas</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact" class="nav-cta">Get a Quote</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<div class="hero" id="hero">
+  <div class="hero-bg" style="background-image:url('https://cdn.hswstatic.com/gif/How-to-install-architectural-shingles.jpg')"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-label" data-reveal="fade" style="--i:0">Scotch Plains, NJ &mdash; Serving Union County for 25+ Years</span>
+    <h1 data-reveal="up" style="--i:1">1,791 Five-Star Reviews.<br>Zero Shortcuts.</h1>
+    <p class="hero-intro" data-reveal="up" style="--i:2">GAF Certified, Owens Corning Preferred, and CertainTeed qualified. Deegan Roofing has been protecting New Jersey homes with expert craftsmanship and honest service since day one.</p>
+    <div class="hero-stats" data-reveal="up" style="--i:3">
+      <div class="hero-stat">
+        <div class="number">1,791+</div>
+        <div class="label">Verified Reviews</div>
+      </div>
+      <div class="hero-stat">
+        <div class="number">4.9&#9733;</div>
+        <div class="label">Average Rating</div>
+      </div>
+    </div>
+    <div class="hero-buttons" data-reveal="up" style="--i:4">
+      <a href="tel:9083226405" class="btn btn-accent">Call (908) 322-6405</a>
+      <a href="#services" class="btn btn-outline-white">Our Services</a>
+    </div>
+  </div>
+</div>
+
+<!-- Services -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label" data-reveal="fade">Our Services</span>
+      <h2 class="section-title" data-reveal="up">Complete Roofing &amp; Exterior Solutions</h2>
+      <p class="section-subtitle" data-reveal="up">From full roof replacements to gutter installations, our certified crews handle every detail so you don't have to.</p>
+    </div>
+    <div class="card-grid">
+      <!-- Card 1: Roof Replacement -->
+      <div class="card">
+        <div class="card-photo"><img src="https://roofmaxx.com/learning-hub/wp-content/uploads/2021/02/25-roof-maxx-how-to-install-roof-shingles.jpg" alt="Roof Replacement"></div>
+        <div class="card-icon"><i data-lucide="home" stroke-width="1.5"></i></div>
+        <div class="card-body">
+          <h3>Roof Replacement</h3>
+          <p>Full tear-off and replacement using top-tier shingles from GAF, Owens Corning, and CertainTeed. Built to last 30+ years.</p>
+        </div>
+      </div>
+      <!-- Card 2: Roof Repair (dark) -->
+      <div class="card card-dark">
+        <div class="card-photo"><img src="https://generalroof.com/wp-content/uploads/2026/03/roofer-repairing-roof-leak-damaged-shingles.webp" alt="Roof Repair"></div>
+        <div class="card-icon"><i data-lucide="wrench" stroke-width="1.5"></i></div>
+        <div class="card-body">
+          <h3>Roof Repair</h3>
+          <p>Leak detection, storm damage repair, and emergency fixes. We stop the damage before it spreads to your home's interior.</p>
+        </div>
+      </div>
+      <!-- Card 3: Siding -->
+      <div class="card">
+        <div class="card-photo"><img src="https://media.angi.com/s3fs-public/Vinyl-siding-installation-house.jpeg?impolicy=leadImage" alt="Siding Installation"></div>
+        <div class="card-icon"><i data-lucide="layers" stroke-width="1.5"></i></div>
+        <div class="card-body">
+          <h3>Siding Installation</h3>
+          <p>Vinyl, fiber cement, and engineered wood siding that protects your home and boosts curb appeal for years to come.</p>
+        </div>
+      </div>
+      <!-- Card 4: Gutters -->
+      <div class="card">
+        <div class="card-photo"><img src="https://www.legacy-exteriors.com/wp-content/uploads/2023/03/Seamless-Gutters-Madison-Sun-Prairie-WI-Gutter-Guards-15.jpg" alt="Gutter Services"></div>
+        <div class="card-icon"><i data-lucide="droplets" stroke-width="1.5"></i></div>
+        <div class="card-body">
+          <h3>Gutter Services</h3>
+          <p>Seamless gutter installation, gutter guards, and downspout routing to protect your foundation from water damage.</p>
+        </div>
+      </div>
+      <!-- Card 5: Skylights (dark) -->
+      <div class="card card-dark">
+        <div class="card-photo"><img src="https://www.veluxusa.com/images/installation/hero@2x.jpg" alt="Skylights"></div>
+        <div class="card-icon"><i data-lucide="sun" stroke-width="1.5"></i></div>
+        <div class="card-body">
+          <h3>Skylights</h3>
+          <p>VELUX skylight installation and replacement. Bring natural light into your home while maintaining a watertight seal.</p>
+        </div>
+      </div>
+      <!-- Card 6: Flat Roofing -->
+      <div class="card">
+        <div class="card-photo"><img src="https://jpcarrollroofing.com/wp-content/uploads/2025/12/flat-roofing.jpg" alt="Flat Roofing"></div>
+        <div class="card-icon"><i data-lucide="square" stroke-width="1.5"></i></div>
+        <div class="card-body">
+          <h3>Flat Roofing</h3>
+          <p>TPO, EPDM, and modified bitumen flat roof systems for commercial and residential properties. Fully warrantied.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Project Gallery -->
+<section class="gallery-section" id="gallery">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label" data-reveal="fade">Our Work</span>
+      <h2 class="section-title" data-reveal="up">Recent Projects</h2>
+      <p class="section-subtitle" data-reveal="up">A sample of completed roofing, siding, and exterior projects across Union County and beyond.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-tile">
+        <img src="https://roofclaim.com/wp-content/uploads/2022/04/roof-leak.jpg" alt="Roof repair work">
+        <div class="gallery-caption">Roof Repair &mdash; Scotch Plains</div>
+      </div>
+      <div class="gallery-tile">
+        <img src="https://www.deerparkroofing.com/wp-content/uploads/2020/10/P1074825-scaled.jpg" alt="Skylight detail">
+        <div class="gallery-caption">Skylight Installation</div>
+      </div>
+      <div class="gallery-tile">
+        <img src="https://www.bethesdachimney.com/wp-content/uploads/2022/08/IMG_20170214_154154.jpg" alt="Chimney flashing">
+        <div class="gallery-caption">Chimney Flashing &mdash; Westfield</div>
+      </div>
+      <div class="gallery-tile">
+        <img src="https://images.ctfassets.net/79nimht05j33/2Y9nx9feJMsLarau4UHIUF/b0aa5c82ec090aea610f04d4bfecd7eb/Vinyl_Install.jpg?w=1500" alt="Siding work">
+        <div class="gallery-caption">Siding Installation &mdash; Clark</div>
+      </div>
+      <div class="gallery-tile">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200" alt="Completed home exterior">
+        <div class="gallery-caption">Completed Exterior &mdash; Fanwood</div>
+      </div>
+      <div class="gallery-tile">
+        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200" alt="Home with new roof">
+        <div class="gallery-caption">New Roof &mdash; Mountainside</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="section section-alt" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <span class="about-label" data-reveal="fade">About Deegan Roofing</span>
+        <h2 class="about-title" data-reveal="up">25+ Years Protecting New Jersey Homes</h2>
+        <p class="about-text" data-reveal="up">Deegan Roofing has been the go-to roofing contractor in Union County for over two decades. We earned our reputation one roof at a time, with honest estimates, quality materials, and crews who treat your property like their own.</p>
+        <p class="about-text" data-reveal="up">As a GAF Certified, Owens Corning Preferred, and CertainTeed qualified installer, we offer manufacturer-backed warranties that most contractors simply cannot provide.</p>
+        <a href="#contact" class="btn btn-ghost-accent" data-reveal="up">Get Your Free Estimate</a>
+        <div class="about-stats" data-reveal="up">
+          <div>
+            <h4>25+</h4>
+            <p>Years in Business</p>
+          </div>
+          <div>
+            <h4>1,791+</h4>
+            <p>Verified Reviews</p>
+          </div>
+          <div>
+            <h4>4.9</h4>
+            <p>Star Rating</p>
+          </div>
+        </div>
+      </div>
+      <div class="about-features" data-reveal="up">
+        <div class="about-feature">
+          <div class="about-feature-photo"><img src="https://www.blackmoosechimney.com/wp-content/uploads/2020/08/DJI_0720.jpg" alt="Aerial roof inspection"></div>
+          <div>
+            <h3>Thorough Inspections</h3>
+            <p>Every project starts with a detailed roof inspection so you know exactly what needs to be done before any work begins.</p>
+          </div>
+        </div>
+        <div class="about-feature">
+          <div class="about-feature-photo"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600" alt="Local home exterior"></div>
+          <div>
+            <h3>Local Expertise</h3>
+            <p>Based in Scotch Plains, we know the weather, building codes, and neighborhoods of Union County inside and out.</p>
+          </div>
+        </div>
+        <div class="about-feature">
+          <div class="about-feature-photo"><img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600" alt="Suburban home"></div>
+          <div>
+            <h3>Trusted by 1,791 Families</h3>
+            <p>Our 4.9-star rating across nearly 1,800 reviews speaks for itself. We let our work and our customers do the talking.</p>
+          </div>
+        </div>
+        <div class="about-feature">
+          <div class="about-feature-photo"><img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600" alt="Modern home"></div>
+          <div>
+            <h3>Licensed &amp; Insured</h3>
+            <p>Fully licensed NJ roofing contractor with comprehensive liability and workers' compensation insurance on every job.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service Areas -->
+<section class="section" id="areas">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label" data-reveal="fade">Where We Work</span>
+      <h2 class="section-title" data-reveal="up">Serving Union County &amp; Surrounding Areas</h2>
+      <p class="section-subtitle" data-reveal="up">Proudly serving homeowners across central New Jersey with reliable roofing and exterior services.</p>
+    </div>
+    <div class="area-pills">
+      <span class="area-pill">Scotch Plains</span>
+      <span class="area-pill">Westfield</span>
+      <span class="area-pill">Fanwood</span>
+      <span class="area-pill">Clark</span>
+      <span class="area-pill">Mountainside</span>
+      <span class="area-pill">Berkeley Heights</span>
+      <span class="area-pill">Warren</span>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="dark-island" id="reviews">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label" data-reveal="fade">Client Testimonials</span>
+      <h2 class="section-title" data-reveal="up">What Our Clients Say</h2>
+      <p class="section-subtitle" data-reveal="up">Real reviews from real homeowners. 1,791 and counting.</p>
+    </div>
+    <div class="card-grid testimonials-grid">
+      <div class="dark-card">
+        <div class="star-row">
+          <i data-lucide="star" stroke-width="1.5"></i>
+          <i data-lucide="star" stroke-width="1.5"></i>
+          <i data-lucide="star" stroke-width="1.5"></i>
+          <i data-lucide="star" stroke-width="1.5"></i>
+          <i data-lucide="star" stroke-width="1.5"></i>
+        </div>
+        <p class="review-text">"The crew from Deegan Roofing were professional, courteous, and efficient. They completed my roof replacement in just two days, and the quality of work was outstanding."</p>
+        <div class="review-author">Dexter</div>
+        <div class="review-source">Google</div>
+      </div>
+      <div class="dark-card">
+        <div class="star-row">
+          <i data-lucide="star" stroke-width="1.5"></i>
+          <i data-lucide="star" stroke-width="1.5"></i>
+          <i data-lucide="star" stroke-width="1.5"></i>
+          <i data-lucide="star" stroke-width="1.5"></i>
+          <i data-lucide="star" stroke-width="1.5"></i>
+        </div>
+        <p class="review-text">"We had a great experience with Deegan Roofing. They were prompt, professional and did an excellent job on our roof. Highly recommend!"</p>
+        <div class="review-author">Janet</div>
+        <div class="review-source">Google</div>
+      </div>
+      <div class="dark-card">
+        <div class="star-row">
+          <i data-lucide="star" stroke-width="1.5"></i>
+          <i data-lucide="star" stroke-width="1.5"></i>
+          <i data-lucide="star" stroke-width="1.5"></i>
+          <i data-lucide="star" stroke-width="1.5"></i>
+          <i data-lucide="star" stroke-width="1.5"></i>
+        </div>
+        <p class="review-text">"Deegan Roofing replaced our roof and did an amazing job. The crew was professional and cleaned up after themselves. Very happy with the results!"</p>
+        <div class="review-author">Jaye</div>
+        <div class="review-source">Google</div>
+      </div>
+      <div class="dark-card">
+        <div class="star-row">
+          <i data-lucide="star" stroke-width="1.5"></i>
+          <i data-lucide="star" stroke-width="1.5"></i>
+          <i data-lucide="star" stroke-width="1.5"></i>
+          <i data-lucide="star" stroke-width="1.5"></i>
+          <i data-lucide="star" stroke-width="1.5"></i>
+        </div>
+        <p class="review-text">"Excellent work, fair pricing, and great communication throughout the entire process. Would definitely use them again."</p>
+        <div class="review-author">Jennifer</div>
+        <div class="review-source">Google</div>
+      </div>
+      <div class="dark-card">
+        <div class="star-row">
+          <i data-lucide="star" stroke-width="1.5"></i>
+          <i data-lucide="star" stroke-width="1.5"></i>
+          <i data-lucide="star" stroke-width="1.5"></i>
+          <i data-lucide="star" stroke-width="1.5"></i>
+          <i data-lucide="star" stroke-width="1.5"></i>
+        </div>
+        <p class="review-text">"Deegan Roofing did a fantastic job on our roof. They were on time, professional, and the work was done beautifully."</p>
+        <div class="review-author">Lorraine</div>
+        <div class="review-source">Google</div>
+      </div>
+      <div class="dark-card">
+        <div class="star-row">
+          <i data-lucide="star" stroke-width="1.5"></i>
+          <i data-lucide="star" stroke-width="1.5"></i>
+          <i data-lucide="star" stroke-width="1.5"></i>
+          <i data-lucide="star" stroke-width="1.5"></i>
+          <i data-lucide="star" stroke-width="1.5"></i>
+        </div>
+        <p class="review-text">"Very professional and thorough. They explained everything clearly and completed the job on schedule."</p>
+        <div class="review-author">Donald F.</div>
+        <div class="review-source">Angi</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Get in Touch</span>
+      <h2 class="section-title">Ready to Protect Your Home?</h2>
+      <p class="section-subtitle">Request your free estimate today. No pressure, no obligation -- just honest advice from a team that's been doing this for 25+ years.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-form-card">
+        <h3>Send us a message</h3>
+        <p class="form-sub">Fill out the form below and we'll get back to you within one business day.</p>
+        <form action="mailto:info@deeganroofing.com" method="POST" enctype="text/plain">
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about your roofing project..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Get Your Free Estimate</button>
+        </form>
+      </div>
+      <div class="contact-info-card">
+        <h3>Or reach us directly</h3>
+        <p class="info-sub">Our team is available Monday through Saturday. Call us anytime for a free consultation.</p>
+        <div class="info-row">
+          <div class="info-icon"><i data-lucide="phone" stroke-width="1.5"></i></div>
+          <div class="info-content">
+            <div class="info-label">Call</div>
+            <div class="info-value"><a href="tel:9083226405">(908) 322-6405</a></div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon"><i data-lucide="mail" stroke-width="1.5"></i></div>
+          <div class="info-content">
+            <div class="info-label">Email</div>
+            <div class="info-value"><a href="mailto:info@deeganroofing.com">info@deeganroofing.com</a></div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon"><i data-lucide="map-pin" stroke-width="1.5"></i></div>
+          <div class="info-content">
+            <div class="info-label">Location</div>
+            <div class="info-value">Scotch Plains, NJ</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon"><i data-lucide="clock" stroke-width="1.5"></i></div>
+          <div class="info-content">
+            <div class="info-label">Hours</div>
+            <div class="info-value">Mon-Sat: 7:00 AM - 6:00 PM</div>
+          </div>
+        </div>
+        <a href="tel:9083226405" class="info-cta">Call (908) 322-6405</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="https://www.deeganroofing.com/wp-content/uploads/2022/01/nj-local-roofer.png" alt="Deegan Roofing">
+        </div>
+        <p class="footer-desc">Scotch Plains' trusted roofing contractor for 25+ years. GAF Certified, Owens Corning Preferred, and CertainTeed qualified.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/deeganroofingnj" target="_blank" rel="noopener noreferrer"><i data-lucide="facebook" stroke-width="1.5"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Roof Replacement</a></li>
+          <li><a href="#services">Roof Repair</a></li>
+          <li><a href="#services">Siding Installation</a></li>
+          <li><a href="#services">Gutter Services</a></li>
+          <li><a href="#services">Skylights</a></li>
+          <li><a href="#services">Flat Roofing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Service Areas</h4>
+        <ul>
+          <li><a href="#areas">Scotch Plains</a></li>
+          <li><a href="#areas">Westfield</a></li>
+          <li><a href="#areas">Fanwood</a></li>
+          <li><a href="#areas">Clark</a></li>
+          <li><a href="#areas">Mountainside</a></li>
+          <li><a href="#areas">Berkeley Heights</a></li>
+          <li><a href="#areas">Warren</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:9083226405" style="display:flex;align-items:center;gap:12px"><i data-lucide="phone" style="width:20px;height:20px;color:var(--accent);flex-shrink:0" stroke-width="1.5"></i>(908) 322-6405</a></li>
+          <li><a href="#contact" style="display:flex;align-items:flex-start;gap:12px"><i data-lucide="map-pin" style="width:20px;height:20px;color:var(--accent);flex-shrink:0" stroke-width="1.5"></i>Scotch Plains, NJ</a></li>
+          <li><a href="mailto:info@deeganroofing.com" style="display:flex;align-items:center;gap:12px"><i data-lucide="mail" style="width:20px;height:20px;color:var(--accent);flex-shrink:0" stroke-width="1.5"></i>info@deeganroofing.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Deegan Roofing. All rights reserved.</p>
+      <div style="display:flex;gap:24px">
+        <a href="#" style="color:var(--slate-500);text-decoration:none">Privacy Policy</a>
+        <a href="#" style="color:var(--slate-500);text-decoration:none">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile Sticky CTA -->
+<div class="mobile-sticky-cta">
+  <a href="tel:9083226405">Call (908) 322-6405</a>
+</div>
+
+<script>
+(function(){
+  lucide.createIcons();
+  // Force gold fill on testimonial star icons
+  document.querySelectorAll('.dark-card .star-row svg').forEach(function(s){
+    s.style.fill = 'currentColor';
+    s.style.stroke = 'currentColor';
+  });
+  var nav=document.getElementById('main-nav'),hero=document.getElementById('hero');
+  var nIO=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isIntersecting)nav.classList.remove('nav-scrolled');else nav.classList.add('nav-scrolled')})},{threshold:0,rootMargin:'-60px 0px 0px 0px'});
+  nIO.observe(hero);
+  var r=document.querySelectorAll('[data-reveal]'),g=document.querySelectorAll('.card-grid,.testimonials-grid,.area-pills,.gallery-grid');
+  var io=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isIntersecting){en.target.classList.add('visible');io.unobserve(en.target)}})},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+  r.forEach(function(el){io.observe(el)});
+  g.forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
